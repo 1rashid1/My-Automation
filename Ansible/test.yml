@@ -1,0 +1,5 @@
+tasks:
+  - ansible.builtin.service:
+      name: foo
+      state: started
+      enabled: yes
