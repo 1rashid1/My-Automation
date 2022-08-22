@@ -1,0 +1,11 @@
+---
+- name: Network Getting Started First Playbook for IOS (Cisco Device)
+  connection: network_cli
+  gather_facts: false
+  task:
+    - name: Get config for IOS devices
+      ios_facts:
+        gather_subset: all
+    - name: Display the config
+      debug:
+        msg: "The hostname is {{ ansible_net_hostname }} and OS is {{ ansible_net_version}}"
